@@ -1,0 +1,74 @@
+nav {
+  border-right: solid 1px var(--border);
+  height: 100%;
+  width: 15em;
+
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em 1.5em;
+  background-color: white;
+
+  justify-content: space-between;
+}
+
+nav h1 {
+  color: var(--main-text);
+  user-select: none;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  color: var(--main-text);
+}
+
+nav li {
+  margin: 2px 0;
+  padding: 0.8em 1em;
+  letter-spacing: 0.3px;
+
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+
+  font-weight: 410;
+}
+
+.selected {
+  background-color: #D5DFE3;
+}
+
+.box {
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 30%;
+  margin-right: 10px;
+}
+
+nav .user-card {
+  display: flex;
+  align-items: center;
+}
+
+
+nav .user-card img {
+  background-color: black;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+nav .username {
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+
+nav .email {
+  font-weight: 300;
+  font-size: 0.6rem;
+}

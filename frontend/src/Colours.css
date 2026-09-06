@@ -1,0 +1,18 @@
+/* COLORS */
+
+:root {
+  /* Backgrounds */
+  --main-background: #F8F6F1;
+  --card-background: #FEFDF9;
+  --white-background: #FFFFFF;
+
+  /* Text */
+  --main-text: #19313B;
+  --secondary-text: #718086;
+  --accent-text: #607F8A;
+  --disabled-text: #F8F6F1;
+
+  /* UI */
+  --border: #DDD9D0;
+  --disabled-background: #B0B5B6;
+}
