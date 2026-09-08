@@ -1,10 +1,31 @@
 import './Nav.css';
-import { useState } from 'react';
+import { useState, type ComponentType } from 'react';
+import { House, CalendarDays, Heart, Users, MessageCircleMore, Wallet, UserRound, Settings, LogOut } from 'lucide-react';
 
-export default function Nav() {
+export interface Option {
+  icon: ComponentType<{ size?: number }>,
+  tag: string
+}
 
-  const options = ["Dashboard", "Calendar", "Weddings", "Couples", "Messages", "Finances", "Profile", "Settings"];
-  const [selectedOption, setSelectedOption] = useState<String>("Dashboard");
+interface Properties {
+  page: string,
+  setPage: (page: string) => void
+}
+
+export default function Nav(props: Properties) {
+
+  const options: Option[] = [
+    { icon: House, tag: "Dashboard" },
+    { icon: CalendarDays, tag: "Calendar" },
+    { icon: Heart, tag: "Weddings" },
+    { icon: Users, tag: "Couples" },
+    { icon: MessageCircleMore, tag: "Messages" },
+    { icon: Wallet, tag: "Finances" },
+    { icon: UserRound, tag: "Profile" },
+    { icon: Settings, tag: "Settings" }
+  ];
+
+  const iconSize: number = 18;
 
   return (
     <nav>
@@ -12,7 +33,7 @@ export default function Nav() {
 
       <ul>
         {
-          options.map((option: String) => option === selectedOption ? <li className='selected' onClick={() => { setSelectedOption(option) }}>{option}</li> : <li onClick={() => { setSelectedOption(option) }}>{option}</li>)
+          options.map((option: Option) => option.tag === props.page ? <li key={option.tag} style={{ backgroundColor: "#D5DFE3" }} className='selected' onClick={() => { props.setPage(option.tag) }}> <option.icon size={iconSize} /> <p>{option.tag}</p></li> : <li key={option.tag} onClick={() => { props.setPage(option.tag) }}> <option.icon size={iconSize} /> <p>{option.tag}</p></li>)
         }
       </ul>
 
@@ -24,6 +45,8 @@ export default function Nav() {
             <p className='email'>benfoubister@cool.com</p>
           </div>
         </div>
+
+        <li><LogOut size={iconSize} /><p>Logout</p></li>
       </div>
     </nav>
   )

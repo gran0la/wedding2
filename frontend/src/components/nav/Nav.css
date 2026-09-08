@@ -1,25 +1,27 @@
 nav {
   border-right: solid 1px var(--border);
   height: 100%;
-  width: 15em;
 
   display: flex;
   flex-direction: column;
-  padding: 1.5em 1.5em;
+  padding: 1.5em 1.0em;
   background-color: white;
 
   justify-content: space-between;
+
+
+  color: var(--main-text);
 }
 
 nav h1 {
   color: var(--main-text);
   user-select: none;
   cursor: pointer;
+  padding: 0 0.5em;
 }
 
 nav ul {
   list-style: none;
-  color: var(--main-text);
 }
 
 nav li {
@@ -36,39 +38,39 @@ nav li {
   font-weight: 410;
 }
 
-.selected {
-  background-color: #D5DFE3;
+nav li:hover {
+  background-color: #DCE1E361;
 }
 
-.box {
-  width: 8px;
-  height: 8px;
-  background-color: white;
-  border-radius: 30%;
-  margin-right: 10px;
+nav li p {
+  margin-left: 1em;
 }
 
 nav .user-card {
   display: flex;
   align-items: center;
+  padding: 0.8em 0.5em;
+  overflow: hidden;
+  user-select: none;
+  cursor: pointer;
 }
 
 
 nav .user-card img {
-  background-color: black;
-  height: 50px;
-  width: 50px;
+  background-color: var(--secondary-text);
+  height: 40px;
+  width: 40px;
   border-radius: 100%;
   margin-right: 10px;
 }
 
 nav .username {
-  font-weight: 600;
+  font-weight: 410;
   font-size: 0.8rem;
 }
-
 
 nav .email {
   font-weight: 300;
   font-size: 0.6rem;
+  opacity: 0.8;
 }
