@@ -15,4 +15,11 @@
   /* UI */
   --border: #DDD9D0;
   --disabled-background: #B0B5B6;
+  --selected-background: #D5DFE3;
+
+  /* Soft accents */
+  --sage-background: #DCE6DF;
+  --blue-background: #DCE7EE;
+  --blush-background: #EFE0DD;
+  --sand-background: #EAE4D5;
 }

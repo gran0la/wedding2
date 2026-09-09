@@ -1,0 +1,49 @@
+.card {
+  background-color: white;
+  border-radius: 8px;
+  width: 15em;
+  margin-right: 1.5em;
+  border: solid 1px var(--border);
+  padding: 0.7em;
+
+  display: flex;
+  align-items: flex-start;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.card-circle {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  background-color: var(--sage-background);
+  margin-right: 0.5em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--main-text);
+}
+
+.card-description {
+  margin-bottom: auto;
+}
+
+.card h2 {
+  font-size: 2.3rem;
+  color: var(--main-text);
+  font-weight: 450;
+}
+
+.card p {
+  font-size: 0.8rem;
+  color: var(--accent-text);
+  font-weight: 450;
+}
+
+.card-arrow {
+  margin: auto 0 auto auto;
+  color: var(--secondary-text);
+}

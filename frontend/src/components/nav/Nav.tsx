@@ -33,7 +33,7 @@ export default function Nav(props: Properties) {
 
       <ul>
         {
-          options.map((option: Option) => option.tag === props.page ? <li key={option.tag} style={{ backgroundColor: "#D5DFE3" }} className='selected' onClick={() => { props.setPage(option.tag) }}> <option.icon size={iconSize} /> <p>{option.tag}</p></li> : <li key={option.tag} onClick={() => { props.setPage(option.tag) }}> <option.icon size={iconSize} /> <p>{option.tag}</p></li>)
+          options.map((option: Option) => option.tag === props.page ? <li key={option.tag} style={{ backgroundColor: "#DCE7EE" }} className='selected' onClick={() => { props.setPage(option.tag) }}> <option.icon size={iconSize} /> <p>{option.tag}</p></li> : <li key={option.tag} onClick={() => { props.setPage(option.tag) }}> <option.icon size={iconSize} /> <p>{option.tag}</p></li>)
         }
       </ul>
 
