@@ -1,0 +1,9 @@
+.fc {
+  cursor: pointer;
+  border-radius: 0;
+  background-color: red;
+}
+
+.fc .fc-scrollgrid {
+  border: none;
+}

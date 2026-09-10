@@ -1,11 +1,12 @@
 .dashboard {
   min-height: 100vh;
-  grid-template-columns: repeat(12, 1fr);
   padding: 2em 3.5em;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .top {
-  grid-column: 12;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -28,9 +29,8 @@
 }
 
 .titles {
-  grid-column: 12;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .titles h1 {
@@ -46,6 +46,50 @@
 }
 
 .cards {
-  grid-column: 12;
   display: flex;
+  gap: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.main-grid {
+  flex: 1;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5em;
+}
+
+.calendar-container {
+  grid-column: span 8;
+
+  border: solid 1px var(--border);
+  background-color: white;
+
+  border-radius: 8px;
+  padding: 1.5em;
+}
+
+.right-info {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.right-info>* {
+  flex: 1;
+}
+
+.upcoming-events {
+  border: solid 1px var(--border);
+  background-color: white;
+
+  border-radius: 8px;
+}
+
+.tasks-reminders {
+  border: solid 1px var(--border);
+  background-color: white;
+
+  border-radius: 8px;
 }

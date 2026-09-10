@@ -1,10 +1,12 @@
 import './Nav.css';
-import { useState, type ComponentType } from 'react';
-import { House, CalendarDays, Heart, Users, MessageCircleMore, Wallet, UserRound, Settings, LogOut } from 'lucide-react';
+import { type ComponentType } from 'react';
+import { House, CalendarDays, Heart, Users, MessageCircleMore, UserRound, Settings, LogOut, HandCoins } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 export interface Option {
   icon: ComponentType<{ size?: number }>,
-  tag: string
+  tag: string,
+  path: string
 }
 
 interface Properties {
@@ -15,14 +17,14 @@ interface Properties {
 export default function Nav(props: Properties) {
 
   const options: Option[] = [
-    { icon: House, tag: "Dashboard" },
-    { icon: CalendarDays, tag: "Calendar" },
-    { icon: Heart, tag: "Weddings" },
-    { icon: Users, tag: "Couples" },
-    { icon: MessageCircleMore, tag: "Messages" },
-    { icon: Wallet, tag: "Finances" },
-    { icon: UserRound, tag: "Profile" },
-    { icon: Settings, tag: "Settings" }
+    { icon: House, tag: "Dashboard", path: "/dashboard" },
+    { icon: CalendarDays, tag: "Calendar", path: "/calendar" },
+    { icon: Heart, tag: "Weddings", path: "/weddings" },
+    { icon: Users, tag: "Couples", path: "/couples" },
+    { icon: MessageCircleMore, tag: "Messages", path: "/messages" },
+    { icon: HandCoins, tag: "Finances", path: "/finances" },
+    { icon: UserRound, tag: "Profile", path: "/profile" },
+    { icon: Settings, tag: "Settings", path: "/settings" }
   ];
 
   const iconSize: number = 18;
@@ -33,7 +35,7 @@ export default function Nav(props: Properties) {
 
       <ul>
         {
-          options.map((option: Option) => option.tag === props.page ? <li key={option.tag} style={{ backgroundColor: "#DCE7EE" }} className='selected' onClick={() => { props.setPage(option.tag) }}> <option.icon size={iconSize} /> <p>{option.tag}</p></li> : <li key={option.tag} onClick={() => { props.setPage(option.tag) }}> <option.icon size={iconSize} /> <p>{option.tag}</p></li>)
+          options.map((option: Option) => option.path === props.page ? <Link to={option.path}><li key={option.tag} style={{ backgroundColor: "#DCE7EE" }} className='selected' onClick={() => { props.setPage(option.path) }}> <option.icon size={iconSize} /> <p>{option.tag}</p></li></Link> : <Link to={option.path}><li key={option.tag} onClick={() => { props.setPage(option.path) }}> <option.icon size={iconSize} /> <p>{option.tag}</p></li></Link>)
         }
       </ul>
 
