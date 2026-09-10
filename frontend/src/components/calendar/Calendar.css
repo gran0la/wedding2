@@ -1,9 +1,15 @@
-.fc {
-  cursor: pointer;
-  border-radius: 0;
-  background-color: red;
+.toolbar-title {
+  color: var(--main-text);
+  font-size: 1.75rem;
 }
 
-.fc .fc-scrollgrid {
-  border: none;
+.calendar-buttons {
+  border-radius: 8px;
+  color: var(--secondary-text);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.day-cells {
+  border: 1px solid var(--border);
 }
